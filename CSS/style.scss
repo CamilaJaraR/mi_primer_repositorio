@@ -1,0 +1,114 @@
+// Variables
+$font-family: "Montserrat", sans-serif;
+$primary-color: black;
+$secondary-color: grey;
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text-center {
+    text-align: center;
+}
+
+body {
+    font-family: $font-family;
+    background-color: #ffffff;
+    color: $primary-color;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+
+    .logo-kananda {
+        @extend .text-center;
+    }
+
+    .buscar-bolsa {
+        font-size: 24px;
+    }
+}
+
+
+// Navbar
+.navbar {
+    margin: 20px 0;
+}
+
+// Imagen Principal
+.imagen-principal img {
+    width: 100%;
+    height: auto;
+}
+
+// New Arrivals
+.button-container {
+    @extend .text-center;; // Centrar el botón
+    margin: 20px 0; // Espaciado alrededor del botón
+  }
+  
+  .button-animated {
+    background-color: #3498db; // Color de fondo azul
+    color: white; // Color del texto
+    border: none; // Sin bordes
+    padding: 10px 20px; // Espaciado interno
+    font-size: 16px; // Tamaño de la fuente
+    border-radius: 5px; // Bordes redondeados
+    cursor: pointer; // Cambia el cursor al pasar por encima
+    transition: transform 0.3s ease, background-color 0.3s ease; // Efecto de transición
+  
+    &:hover {
+      background-color: #2980b9; // Cambia el color al pasar por encima
+      transform: scale(1.1); // Aumenta ligeramente el tamaño
+    }
+  
+    &:active {
+      transform: scale(0.9); // Reduce ligeramente el tamaño al hacer clic
+    }
+  }
+  
+
+// Zapatos
+.zapatos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.zapatos img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.modelo-uno,
+.modelo-dos,
+.modelo-tres {
+    @extend .text-center;
+}
+
+.imagen-instrucciones-talla img {
+    max-width: 70%;
+    /* Ancho de la imagen */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    @extend .text-center;
+    padding-bottom: 200px;
+}
+
+// Footer
+.footer {
+    background-color: $secondary-color;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
